@@ -6,7 +6,7 @@ sudo apt-get install -y docker-ce=5:19.03.15~3-0~ubuntu-bionic docker-ce-cli=5:1
 
 cat << EOF > daemon.json
 {
- "exec-opts": ["native.cgroupdriver=systemd"],
+ "exec-opts": "native.cgroupdriver=systemd",
  "log-driver": "json-file",
  "log-opts": {
  "max-size": "100m"
